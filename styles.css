@@ -1,0 +1,310 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-image: url('DSC_1193.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* Estilo del logo del Gym */
+.gym-logo {
+  width: 140px;
+  height: auto;
+  margin: -80px auto;
+  display: block;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Frase de bienvenida */
+.welcome-message {
+  font-size: 16px;
+  margin: 15px 0;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Enlaces Sociales */
+.social-links {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: #2e8b57;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustar la apariencia para móviles */
+@media (max-width: 600px) {
+  
+  .gym-logo {
+    width: 100px;
+    margin: -40px auto;
+  }
+
+  .welcome-message {
+    font-size: 16px;
+  }
+
+  .social-links {
+    font-size: 14px;
+  }
+}
+
+
+/* Contenedor principal */
+.container {
+  max-width: 400px;
+  width: 95%; /* Escalable para pantallas pequeñas */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de preguntas */
+#question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 300px;
+  max-width: 500px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Ajuste para contenido interno */
+#question-box {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Cronómetro y puntaje */
+#score-timer-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Alinear las respuestas verticalmente */
+.btn-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Botones */
+.btn {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #2e8b57;
+}
+
+/* Botones dinámicos */
+.correct {
+  background-color: #2e8b57 !important;
+}
+
+.wrong {
+  background-color: #ff4c4c !important;
+}
+
+.correct::after {
+  content: '✔';
+  color: #2e8b57;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.wrong::after {
+  content: '✖';
+  color: #ff4c4c;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Ocultar elementos dinámicamente */
+.hide {
+  display: none;
+}
+
+/* Botones de control */
+#start-btn, #next-btn, #share-btn {
+  margin-top: 20px;
+}
+
+/* Resultado del juego */
+#result-container {
+  background-color: rgba(27, 27, 27, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+}
+
+#final-score-message {
+  margin-bottom: 10px; /* Espacio entre el mensaje y el botón */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#share-btn {
+  margin-top: 15px; /* Espacio superior para el botón */
+  width: 100%;
+  max-width: 300px;
+}
+
+
+/* Cronómetro */
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #question {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  /* Asegurar que el contenido no se desborde */
+  #question-container {
+    min-height: 350px;
+  }
+}
+.correct-animate {
+  animation: correctPulse 1s ease-out;
+}
+
+.wrong-animate {
+  animation: wrongShake 0.5s ease-in-out;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #2e8b57;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #2e8b57;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #2e8b57;
+  }
+}
+
+@keyframes wrongShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+/* Barra de progreso */
+#progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #2e8b57;
+  transition: width 0.3s ease;
+}
+/* Estilo para el logo de Instagram */
+.social-logo {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+  transform: scale(1.1);
+}
+

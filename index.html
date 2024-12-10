@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Deportiva - Aniversario Prunus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HTML Ajustado -->
+  <div class="container">
+    <!-- Logo del Gym -->
+    <img src="PRUNUS FRASES STORIES (15).png" alt="Logo del Gym" class="gym-logo">
+  
+    <h1>¿Te animas a contestar todas las preguntas?</h1>
+    
+    <!-- Frase Motivacional -->
+    <p class="welcome-message">"Supera tus límites: veamos cuánto sabes del equipo PRUNUS"</p>
+  
+    <div id="game" class="game">
+      <div id="question-container" class="hide">
+        <div id="score-timer-container">
+          <p>Puntaje: <span id="score">0</span></p>
+          <p>Tiempo: <span id="timer">10</span> s</p>
+        </div>
+  
+        <div id="question-box">
+          <h2 id="question">Si estás listo, mandale</h2>
+        </div>
+  
+        <div id="answer-buttons" class="btn-grid"></div>
+  
+        <button id="next-btn" class="btn hide">Siguiente</button>
+      </div>
+  
+      <button id="start-btn" class="btn">Comenzar Juego</button>
+    
+
+    </div>
+  
+    <!-- Enlaces Sociales -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/prunus.fit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"rel="noopener noreferrer">
+        <img src="instagram (2).png" alt="Instagram" class="social-logo"></a>
+    </div>
+
+    
+  </div>
+
+  <div id="result-container" class="hide">
+    <h2 id="final-score-message">¡Tu puntaje fue de: 0!</h2> <!-- Mensaje del puntaje -->
+    <p>Descárgalo, compártelo y etiquétanos para celebrar 🎉</p>
+    <button id="share-btn" class="btn">Compartir Puntaje</button> <!-- Botón de compartir -->
+  </div>
+  
+</div>
+
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
